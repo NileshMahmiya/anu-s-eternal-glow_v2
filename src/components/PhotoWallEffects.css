@@ -1,0 +1,31 @@
+/* PhotoWallEffects.css */
+
+@keyframes sparkle-shower {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+}
+
+@keyframes heart-shower {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-200px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.animate-sparkle-shower {
+  animation: sparkle-shower 1.5s ease-in-out;
+}
+
+.animate-heart-shower {
+  animation: heart-shower 2s ease-in-out;
+}

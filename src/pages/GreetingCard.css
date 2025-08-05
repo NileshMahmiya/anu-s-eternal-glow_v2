@@ -1,0 +1,68 @@
+.card-wrapper {
+  perspective: 1500px;
+  cursor: pointer;
+  transform: rotateX(5deg) rotateY(-8deg);
+  transition: transform 1.5s ease-in-out;
+}
+
+.card-wrapper.open {
+  transform: rotateX(0deg) rotateY(0deg);
+}
+
+.greeting-card {
+  width: 600px;
+  height: 400px;
+  background: linear-gradient(135deg, #F7B5CA, #F0A8D0);
+  border-radius: 1rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  transition: transform 1.4s ease-in-out;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-wrapper.open .greeting-card {
+  transform: rotateY(20deg);
+}
+
+.card-left-panel,
+.card-right-panel {
+  width: 50%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #FFEBD4;
+  position: relative;
+}
+
+.card-left-panel {
+  border-right: 1px solid #FFC6C6;
+}
+
+.card-right-panel {
+  background-color: #FFF0F5;
+}
+
+.taped-photo {
+  width: 100%;
+  border-radius: 1rem;
+  border: 4px solid #FFEBD4;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
+  transform: rotate(-3deg);
+}
+
+/* Crease effect */
+.greeting-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: rgba(200, 100, 150, 0.3);
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.8);
+  z-index: 2;
+}
